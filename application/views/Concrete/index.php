@@ -6,18 +6,18 @@
         <meta charset="utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!--        Custom Style Sheet-->
+        <!--        Custom Style Sheet-->
         <link rel="stylesheet" href="assets/css/style.css">
-        
+
     </head>
-    
+
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -52,11 +52,48 @@
         </div>
 
         <div class="container-fluid bg-grey">
-            <div class="col-md-6">
-                
+            <div class="col-md-3">
+                <form action="<?php echo base_url();?>Concrete_calculator/insert_slab" method="post" >
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <label>Length</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="number" name="length">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Width</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="number" name="width">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <label>Hieght</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="number" name="hieght">
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Quantity</label>
+                        </div>
+                        <div class="col-md-6">
+
+                            <input type="number" name="qty">
+                        </div>
+                    </div>
+                    <input class="btn btn-default" type="submit" value="Submit" name="submit_slab">
+                </form>
             </div>
-            <div class="col-md-6">
-            </div>
+        </div>
+        <div class="col-md-9">
         </div>
 
         <!-- Container (Portfolio Section) -->
@@ -100,7 +137,6 @@
             <a href="#myPage" title="To Top">
                 <span class="glyphicon glyphicon-chevron-up"></span>
             </a>
-            <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
         </footer>
 
         <script>
