@@ -2,34 +2,78 @@
     margin-top: 3px;
 }
 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5,h6,label,p {font-family: "raleway", sans-serif}
 body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
 }
+
+.navbar-items{
+    font-family: "raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: white !important;
+    letter-spacing: 2px;
+}
+
+.navbar-items:hover{
+    color: #0274be!important;
+    background: white !important;
+    letter-spacing: 2px;
+}
+
+.active{
+    color: #0274be!important;
+    background: white !important;
+    letter-spacing: 2px;
+}
+
+.navbar-items-dp{
+    padding: 10px !important;
+    font-family: "raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 700 !important;
+/*    color: black!important;*/
+    letter-spacing: 2px;
+}
+
+.navbar-items-dp:hover{
+    color: #0274be!important;
+}
+
+.container1{
+    height: 50px;
+}
+
 h2 {
-    font-size: 24px;
-    text-transform: uppercase;
     color: #303030;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
+}
+h3 {
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 h4 {
     font-size: 19px;
     line-height: 1.375em;
     color: #303030;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }  
 .jumbotron {
     background-color: #f4511e;
     color: #fff;
     padding: 100px 25px;
-    font-family: "Raleway", sans-serif;
+    font-family: "raleway", sans-serif;
 }
 .container-fluid {
-    padding: 60px 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 .bg-grey {
     background-color: #f6f6f6;
@@ -110,28 +154,6 @@ h4 {
     background-color: #f4511e;
     color: #fff;
 }
-.navbar {
-    margin-bottom: 0;
-    background-color: #f4511e;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: "Raleway", sans-serif;
-}
-.navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
-}
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
-}
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-}
 footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
@@ -144,6 +166,10 @@ footer .glyphicon {
     animation-duration: 1s;
     -webkit-animation-duration: 1s;
     visibility: visible;
+}
+
+td{
+    font-size: 17px;
 }
 @keyframes slide {
     0% {
@@ -166,17 +192,65 @@ footer .glyphicon {
     }
 }
 @media screen and (max-width: 768px) {
-    .col-sm-4 {
-        text-align: center;
-        margin: 25px 0;
+    .col-xs-1 {
+        width: 8.33%;
+    }
+    .col-xs-2 {
+        width: 16.66%;
+    }
+    .col-xs-3 {
+        width: 25%;
+    }
+    .col-xs-4 {
+        width: 33%;
+    }
+    .col-xs-5 {
+        width: 41.67%;
+    }
+    .col-xs-6 {
+        width: 50%;
+    }   
+    .col-xs-7 {
+        width: 58.88%;
+    }
+    .col-xs-8 {
+        width: 66.66%;
+    }
+    .col-xs-9 {
+        width: 75%;
+    }
+    .col-xs-10 {
+        width: 83.33%;
+    }
+    .col-xs-11 {
+        width: 91.6%;
+    }
+    .col-xs-12 {
+        width: 100%;
     }
     .btn-lg {
         width: 100%;
         margin-bottom: 35px;
     }
 }
-@media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 25px;
     }
-}
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    td {
+        font-size: 15px;
+    }
+    @media screen and (max-width: 480px) {
+        .logo {
+            font-size: 150px;
+        }
+    }
