@@ -9,8 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
-        <!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<!--        <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -96,15 +96,129 @@ if(CURR_URL==NON_WWW1 || CURR_URL==NON_WWW2){window.location.href = WWW_URL;cons
             </div>
         </div>
 
+        <!--
+<div class="container-fluid bg-grey">
+<center>
+<h3> Square/ Rectangular Column, Beam, Slab</h3>
+</center>
+<div class="row">
+<div class="col-md-3">
+<center><img src="<?php echo base_url();?>assets/img/slab.jpg" width="70%"></center>
+</div>
+<div class="col-md-4 col-xs-12" style="margin-bottom: 15px;margin-top: 15px;">
+<form action="<?php echo base_url();?>Concrete_calculator/insert_slab" method="post" >
+<div class="row">
+
+<div class="col-md-6 col-xs-5">
+<label>Length (l)</label>
+</div>
+<div class="col-md-4 col-xs-6">
+<input type="number" name="length" value="<?php if(isset($concrete_req)){echo $length;} ?>" required style="width:50px;">
+<select name="length_unit">
+<option value="m">metre</option>
+<option value="f">feets</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 col-xs-5">
+<label>Width (w)</label>
+</div>
+<div class="col-md-4 col-xs-6">
+<input type="number" name="width" value="<?php if(isset($concrete_req)){echo $width;} ?>" required style="width:50px;">
+<select name="width_unit">
+<option value="m">metre</option>
+<option value="f">feets</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 col-xs-5">
+
+<label>Hieght (h)</label>
+</div>
+<div class="col-md-4 col-xs-6">
+<input type="number" name="hieght" value="<?php if(isset($concrete_req)){echo $hieght;} ?>" required style="width:50px;">
+<select name="hieght_unit">
+<option value="m">metre</option>
+<option value="f">feets</option>
+</select>
+</div> 
+</div>
+<div class="row">
+<div class="col-md-6 col-xs-5">
+<label>No. of Columns /Beam/Slab</label>
+</div>
+<div class="col-md-4 col-xs-6">
+
+<input type="number" name="qty" value="<?php if(isset($concrete_req)){echo $qty;} ?>" required style="width:50px;">
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 col-xs-5">
+<label>Mix of concrete (A:B:C) </label>
+</div>
+<div class="col-md-5 col-xs-6">
+<input type="number" name="a" style="width:40px;" value="<?php if(isset($concrete_req)){echo $a;} ?>" required>
+<input type="number" name="b" style="width:40px;" value="<?php if(isset($concrete_req)){echo $b;} ?>" required>
+<input type="number" name="c" style="width:40px;" value="<?php if(isset($concrete_req)){echo $c;} ?>" required>
+</div>
+</div>
+<input class="btn btn-default" type="submit" value="Submit" name="submit_slab">
+</form>
+</div>
+<div class="col-md-5 ">
+<h4><u>Result</u></h4>
+<?php
+if (isset($concrete_req))
+{
+?>
+<div class="row">
+<div class="col-md-10 col-xs-12">
+
+<table class="table-striped table-bordered">
+<tr>
+<td>Quantity of Concrete Required</td>
+<td><b><?php echo round($concrete_req,2); ?></b></td>
+<td>m3</td>
+</tr>
+<tr>
+<td>Quantity of Cement</td>
+<td><b><?php echo round($cement,2); ?></b> </td>
+<td>Bags</td>
+</tr>
+<tr>
+<td>Quantity of Fine Aggregate (sand)</td>
+<td><b><?php echo round($fine_agg,2); ?></b></td>
+<td>m3</td>                                
+</tr>
+<tr>
+<td>Quantity of Coarse Aggregates (Rodi)</td>
+<td><b><?php echo round($course_agg,2); ?></b></td>
+<td>m3</td>                                
+</tr>
+</table>
+<a href="<?php echo base_url();?>Concrete_calculator/slab_calc_pdf?concrete_req=<?php echo $concrete_req; ?>&cement=<?php echo $cement; ?>&fine_agg=<?php echo $fine_agg; ?>&course_agg=<?php echo $course_agg; ?>" target="_blank"><b>Download the Result  </b><i class="fa fa-file-pdf-o fa-1x" aria-hidden="true"></i></a>
+</div>
+</div>
+<?php
+}
+?>
+
+</div>
+</div>
+</div>
+-->
+
         <div class="container-fluid bg-grey">
             <center>
-                <h3> Square/ Rectangular Column, Beam, Slab</h3>
+                <h3>Square/ Rectangular Column, Beam, Slab</h3>
             </center>
             <div class="row">
                 <div class="col-md-3">
                     <center><img src="<?php echo base_url();?>assets/img/slab.jpg" width="70%"></center>
                 </div>
-                <div class="col-md-4 col-xs-12" style="margin-bottom: 15px;margin-top: 15px;">
+                <div class="col-md-4" style="margin-bottom: 15px;margin-top: 15px;">
                     <form action="<?php echo base_url();?>Concrete_calculator/insert_slab" method="post" >
                         <div class="row">
 
@@ -166,7 +280,7 @@ if(CURR_URL==NON_WWW1 || CURR_URL==NON_WWW2){window.location.href = WWW_URL;cons
                         <input class="btn btn-default" type="submit" value="Submit" name="submit_slab">
                     </form>
                 </div>
-                <div class="col-md-5 ">
+                <div class="col-md-5">
                     <h4><u>Result</u></h4>
                     <?php
                     if (isset($concrete_req))
@@ -207,7 +321,6 @@ if(CURR_URL==NON_WWW1 || CURR_URL==NON_WWW2){window.location.href = WWW_URL;cons
                 </div>
             </div>
         </div>
-
         <div class="container-fluid bg-grey">
             <center>
                 <h3>Hole, Column, or Round Footings</h3>
@@ -315,7 +428,7 @@ if(CURR_URL==NON_WWW1 || CURR_URL==NON_WWW2){window.location.href = WWW_URL;cons
                 <div id="mc_embed_signup_scroll">
                     <label for="mce-EMAIL">Subscribe to our mailing list</label>
                     <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required >
-                    real people should not fill this in and expect good things - do not remove this or risk form bot signups
+<!--                    real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_53c3c62743909e39787ac168e_c854efab19" tabindex="-1" value=""></div>
                     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="width: 90%;"></div>
                 </div>
