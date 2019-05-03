@@ -100,7 +100,7 @@
                 <div class="col-md-3">
                     <center><img src="<?php echo base_url();?>assets/img/slab.jpg" width="70%"></center>
                 </div>
-                <div class="col-md-4" style="margin-bottom: 15px;margin-top: 15px;">
+                <div class="col-md-5" style="margin-bottom: 15px;margin-top: 15px;">
                     <form action="<?php echo base_url();?>Concrete_calculator/insert_slab" method="post" >
                         <div class="row">
 
@@ -108,7 +108,7 @@
                                 <label>Length (l)</label>
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <input type="number" name="length" value="<?php if(isset($concrete_req)){echo $length;} ?>" required style="width:50px;">
+                                <input type="number" name="length" value="<?php if(isset($concrete_req)){echo $length;} ?>" required style="width:40px;">
                                 <select name="length_unit">
                                     <option value="m">metre</option>
                                     <option value="f">feets</option>
@@ -120,7 +120,7 @@
                                 <label>Width (w)</label>
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <input type="number" name="width" value="<?php if(isset($concrete_req)){echo $width;} ?>" required style="width:50px;">
+                                <input type="number" name="width" value="<?php if(isset($concrete_req)){echo $width;} ?>" required style="width:40px;">
                                 <select name="width_unit">
                                     <option value="m">metre</option>
                                     <option value="f">feets</option>
@@ -133,7 +133,7 @@
                                 <label>Hieght (h)</label>
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <input type="number" name="hieght" value="<?php if(isset($concrete_req)){echo $hieght;} ?>" required style="width:50px;">
+                                <input type="number" name="hieght" value="<?php if(isset($concrete_req)){echo $hieght;} ?>" required style="width:40px;">
                                 <select name="hieght_unit">
                                     <option value="m">metre</option>
                                     <option value="f">feets</option>
@@ -146,7 +146,7 @@
                             </div>
                             <div class="col-md-4 col-xs-6">
 
-                                <input type="number" name="qty" value="<?php if(isset($concrete_req)){echo $qty;} ?>" required style="width:50px;">
+                                <input type="number" name="qty" value="<?php if(isset($concrete_req)){echo $qty;} ?>" required style="width:40px;">
                             </div>
                         </div>
                         <div class="row">
@@ -164,7 +164,7 @@
 
                     </form>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <h4><u>Result</u></h4>
                     <?php
                     if (isset($concrete_req))
@@ -213,7 +213,7 @@
                 <div class="col-md-3">
                     <center><img src="<?php echo base_url();?>assets/img/cylin.jpg" width="70%"></center>
                 </div>
-                <div class="col-md-4" style="margin-bottom: 15px;margin-top: 15px;">
+                <div class="col-md-5" style="margin-bottom: 15px;margin-top: 15px;">
                     <form action="<?php echo base_url();?>Concrete_calculator/insert_hole" method="post" >
                         <div class="row">
 
@@ -221,7 +221,7 @@
                                 <label>Diameter (d)</label>
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <input type="number" name="diameter" value="<?php if(isset($concrete_req_hole)){echo $diameter;} ?>" required style="width:50px;">
+                                <input type="number" name="diameter" value="<?php if(isset($concrete_req_hole)){echo $diameter;} ?>" required style="width:40px;">
                                 <select name="diameter_unit">
                                     <option value="m">metre</option>
                                     <option value="f">feets</option>
@@ -234,7 +234,7 @@
                                 <label>Hieght (h)</label>
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <input type="number" name="hieght" value="<?php if(isset($concrete_req_hole)){echo $hieght;} ?>" required style="width:50px;">
+                                <input type="number" name="hieght" value="<?php if(isset($concrete_req_hole)){echo $hieght;} ?>" required style="width:40px;">
                                 <select name="hieght_unit">
                                     <option value="m">metre</option>
                                     <option value="f">feets</option>
@@ -247,7 +247,7 @@
                             </div>
                             <div class="col-md-4  col-xs-6">
 
-                                <input type="number" name="qty" value="<?php if(isset($concrete_req_hole)){echo $qty;} ?>" required style="width:50px;">
+                                <input type="number" name="qty" value="<?php if(isset($concrete_req_hole)){echo $qty;} ?>" required style="width:40px;">
                             </div>
                         </div>
                         <div class="row">
@@ -264,7 +264,7 @@
 {?> <a href="<?php echo base_url();?>"><input class="btn btn-default" value="Reset"></a> <?php } else{?> <input class="btn btn-default" type="submit" value="Submit" name="submit_hole"> <?php } ?>
                     </form>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <h4><u>Result</u></h4>
                     <?php
                     if (isset($concrete_req_hole))
